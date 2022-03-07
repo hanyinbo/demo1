@@ -1,0 +1,35 @@
+{
+    "pages": [
+        "pages/index/index",
+        "pages/logs/logs",
+        "pages/info/query",
+        "pages/company/list"
+    ],
+    "window": {
+        "backgroundTextStyle": "light",
+        "navigationBarBackgroundColor": "#F3E2A9",
+        "navigationBarTitleText": "总包",
+        "navigationBarTextStyle": "black"
+    },
+    "tabBar": {
+        "list": [
+          {
+            "pagePath": "pages/index/index",
+            "text": "首页"
+          },
+          {
+            "pagePath": "pages/company/list",
+            "text": "公司"
+          },
+          {
+            "pagePath": "pages/info/query",
+            "text": "推荐"
+          },
+          {
+            "pagePath": "pages/logs/logs",
+            "text": "我的"
+          }
+        ]
+      },
+    "sitemapLocation": "sitemap.json"
+}
