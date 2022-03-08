@@ -1,4 +1,12 @@
 <!--index.wxml-->
+<view class="search">
+  <view class='search-c'>
+  <input class="location_search" type="text" placeholder="请输入公司名称"/>
+  <!-- <image src="/img/bottom/msg1.png"></image> -->
+  <image class='icon search-icon' src='/img/bottom/zoom.png'></image>
+  <button class="btn btn-g" hover-class="btn-hover2">搜索</button>
+  </view>
+</view>
 <view class="container">
-  推荐楼盘
+  推荐公司
 </view>

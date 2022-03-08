@@ -7,29 +7,38 @@
     ],
     "window": {
         "backgroundTextStyle": "light",
-        "navigationBarBackgroundColor": "#F3E2A9",
-        "navigationBarTitleText": "总包",
-        "navigationBarTextStyle": "black"
+        "navigationBarBackgroundColor": "#d81e06",
+        "navigationBarTitleText": "代招侍卫",
+        "navigationBarTextStyle": "white"
     },
     "tabBar": {
         "list": [
           {
             "pagePath": "pages/index/index",
-            "text": "首页"
+            "text": "首页",
+            "iconPath": "/img/bottom/home.png",
+            "selectedIconPath": "/img/bottom/home-selected.png"
           },
           {
             "pagePath": "pages/company/list",
-            "text": "公司"
+            "text": "公司",
+            "iconPath": "/img/bottom/company.png",
+            "selectedIconPath": "/img/bottom/company-selected.png"
           },
           {
             "pagePath": "pages/info/query",
-            "text": "推荐"
+            "text": "报备",
+            "iconPath": "/img/bottom/backup.png",
+            "selectedIconPath": "/img/bottom/backup-selected.png"
           },
           {
             "pagePath": "pages/logs/logs",
-            "text": "我的"
+            "text": "我的",
+            "iconPath": "/img/bottom/my.png",
+            "selectedIconPath": "/img/bottom/my-selected.png"
           }
         ]
       },
-    "sitemapLocation": "sitemap.json"
+    "sitemapLocation": "sitemap.json",
+    "style": "v2"
 }
