@@ -1,0 +1,5 @@
+<view class="search_input">
+ <navigator>
+   请输入公司
+ </navigator>
+</view>
