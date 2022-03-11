@@ -3,7 +3,7 @@
         "pages/index/index",
         "pages/logs/logs",
         "pages/info/query",
-        "pages/company/list"
+        "pages/company/search"
     ],
     "window": {
         "backgroundTextStyle": "light",
@@ -23,7 +23,7 @@
             "selectedIconPath": "/img/bottom/home-selected.png"
           },
           {
-            "pagePath": "pages/company/list",
+            "pagePath": "pages/company/search",
             "text": "公司",
             "iconPath": "/img/bottom/company.png",
             "selectedIconPath": "/img/bottom/company-selected.png"

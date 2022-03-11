@@ -2,4 +2,26 @@
 <!-- 搜索框开始 -->
   <SearchInput></SearchInput>
   <!-- 搜索框结束 -->
+
+  <!-- 轮播图开始 -->
+  <view class="index_swiper">
+   <swiper indicator-dots 	autoplay 	circular 	indicator-color="#FFFFFF" 	indicator-active-color="#d81e06">
+    <swiper-item  wx:for="{{swiperList}}" wx:key="id">
+      <navigator>
+       <image class="swiper_img" src="{{item.imgUrl}}"></image>
+      </navigator>
+    </swiper-item>
+   </swiper>
+  </view>
+  <!-- 轮播图结束 -->
+
+  <!-- 导航栏开始 -->
+<view class="index_navigation">
+  <navigator 
+  wx:for="{{navigationList}}"
+  wx:key="id">
+   <image mode="widthFix" src="{{item.imgUrl}}"></image>
+  </navigator>
+</view>
+  <!-- 导航栏结束 -->
 </view>

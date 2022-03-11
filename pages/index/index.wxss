@@ -1,0 +1,29 @@
+
+.index_swiper{
+    margin: 30rpx;
+	border-radius: 30rpx;
+	overflow: hidden;
+	/* 兼容IOS，否则在swiper组件内的布局都不受border-radius和overflow的约束 */
+	transform: translateY(0);
+}
+
+.index_swiper swiper {
+    width: calc(100vw - 60rpx);
+	height: calc(50vw - 30rpx); 
+}
+.index_swiper swiper image{
+    width: 100%;
+    border-radius: 30rpx;
+}
+.index_navigation{
+    display: flex;
+
+}
+.index_navigation navigator{
+    flex: 1;
+    padding: 40rpx;
+}
+.index_navigation navigator image {
+  width: 100%;
+}
+
