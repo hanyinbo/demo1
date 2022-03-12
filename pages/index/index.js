@@ -3,13 +3,16 @@ import { request } from '../../request/index.js';
 Page({
     data:{
         swiperList:[],
-        navigationList:[]
+        navigationList:[],
+        companyList:[]
     }, 
     onLoad: function(options){
         console.log('测试');
         this.getSwiperList();
 
         this.getNavigationList();
+
+        this.getCompanyList();
     },
     // 获取轮播图
     getSwiperList(){
@@ -26,6 +29,15 @@ Page({
         .then(result=>{
             this.setData({
                 navigationList:result.data.data
+            })
+        })
+    },
+    //获取公司列表
+    getCompanyList(){
+        request({url:"http://localhost:8080/mini/getCompanyList"})
+        .then(result=>{
+            this.setData({
+                companyList:result.data.data
             })
         })
     }

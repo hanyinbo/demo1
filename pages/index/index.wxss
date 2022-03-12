@@ -26,4 +26,84 @@
 .index_navigation navigator image {
   width: 100%;
 }
-
+.navigation_img_text{
+    margin-top: 50rpx;
+    margin-left: 20rpx;
+    color: #d81e06;
+}
+/* 推荐企业 */
+.index_title{
+    display: flex;
+    flex-direction: row;  
+    height: 60rpx;
+    width: 100%;
+    margin-bottom: 25rpx;
+}
+.title_container{
+    height: 100%;
+    display: flex;
+}
+.title_img{
+    height:65rpx;
+    width: 60rpx;
+    align-self: center;
+    margin-left: 15rpx;
+}
+.company_type{
+    margin-left: -15rpx;
+    font-size: 40rpx;
+    font-weight: bold;
+}
+.index_content navigator{
+    margin-left: 30rpx;
+    margin-bottom: 10rpx;
+    display: flex;
+}
+.company_img{
+  max-width: 40%;
+  height: 210rpx;
+  border-radius: 30rpx;
+}
+.company_detail{
+    display: flex;
+    flex-direction: column;
+    margin-left: 25rpx;
+}
+.company_name{
+    margin-bottom: 11rpx;
+    font-size: 33rpx;
+    font-weight: bold;
+    overflow : hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 1;
+    -webkit-box-orient: vertical;
+    word-break: break-all;
+}
+.company_info{
+    margin-bottom: 10rpx;
+    font-size: 22rpx;
+    color: #808080;
+}
+.recruit_money{
+    margin-bottom: 14rpx;
+    font-size: 25rpx;
+    color: #FF0000;
+    font-weight: bold;
+}
+.recruit_number{
+    margin-bottom: 10rpx;
+    font-size: 25rpx;
+    color: #ec2727;
+    font-weight: bold;
+}
+.company_position{
+    margin-bottom: 14rpx;
+    font-size: 25rpx;
+    overflow : hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 1;
+    -webkit-box-orient: vertical;
+    word-break: break-all;
+}
