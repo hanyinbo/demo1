@@ -4,129 +4,391 @@ Component({
      * 组件的初始数据
      */
     data: {
-        tabTxt: ['品牌', '价格', '销量'],//分类
-        tab: [true, true, true],
-        pinpaiList: [{ 'id': '1', 'title': '品牌1' }, { 'id': '1', 'title': '品牌1' }],
-        pinpai_id: 0,//品牌
-        pinpai_txt: '',
-        jiage_id: 0,//价格
-        jiage_txt: '',
-        xiaoliang_id: 0,//销量
-        xiaoliang_txt: '',
-        details: [  
+        mengban: 0,
+        titlearray: ['', '', '', ''],/** 搜索选项标题 */
+        cdiqu: '',/** 地区选中标题*/
+        cdiquindex: 0,/** 地区选中索引 */
+        cjiage: '',/** 价格选中标题 */
+        cjiageindex: 0,/** 价格选中索引 */
+        chuxing: '',/** 户型选中标题 */
+        chuxingindex: 0,/** 户型选中索引 */
+        cmianji: '',/** 面积选中标题 */
+        cmianjiindex: 0,/** 面积选中索引 */
+        cleixing: '',/** 类型选中标题 */
+        cleixingindex: 0,/** 类型选中索引 */
+        showarray: [/** 展示某个搜索栏 */
+            0, 0, 0, 0
+        ],
+        mimg: [/**搜索页搜索框上方图片 */
+            '../../../assets/home/Commis01.png',
+            '../../../assets/home/Commis02.jpg'
+        ],
+        homeListItemFd: [
             {
-                img: '/images/house2.png',
-                prix: '73',
-                huxing: '3室2厅1卫',
-                area: '128',
-                price: '11456',
-                chanquan: '产权',
-                floor: '7/7',
-                title: '大连市西岗区锦园小区48号楼2单元707',
-                yongjin: '佣金1%，成交奖励奖励1万元',
-                world: [
-                    {
-                        message: 'foo',
-                    },
-                    {
-                        message: 'bar'
-                    }
-                ]
+                id: '1',
+                zd: '1',
+                img: '../../assets/home/homeListItem/01.png',
+                title: '海港广场，精装标准套三出售，带家具家电靠地铁',
+                stmel: '芙蓉区',
+                stmels: '长房东立',
+                number: '700000',
+                specifications: '2室1厅',
+                squaremeter: '67.7',
+                homesuper: '精装修',
+                avatar: '../../assets/home/Headportrait/s01.png',
+                type: '个人'
             },
             {
-                img: '/images/house2.png',
-                prix: '73',
-                huxing: '3室2厅1卫',
-                area: '128',
-                price: '11456',
-                chanquan: '产权',
-                floor: '7/7',
-                title: '大连市西岗区锦园小区48号楼2单元707',
-                yongjin: '佣金1%，成交奖励奖励1万元',
-                world: [
-                    {
-                        message: 'foo',
-                    },
-                    {
-                        message: 'bar'
-                    }
-                ]
+                id: '2',
+                img: '../../assets/home/homeListItem/02.png',
+                title: '中心广场中心.领包入住，精装修房东直租',
+                stmel: '开福区',
+                stmels: '宽属大厦',
+                number: '900000',
+                specifications: '3室1厅',
+                squaremeter: '77.7',
+                homesuper: '精装修',
+                avatar: '../../assets/home/Headportrait/s02.png',
+                type: '个人'
             },
             {
-                img: '/images/house2.png',
-                prix: '73',
-                huxing: '3室2厅1卫',
-                area: '128',
-                price: '11456',
-                chanquan: '产权',
-                floor: '7/7',
-                title: '大连市西岗区锦园小区48号楼2单元707',
-                yongjin: '佣金1%，成交奖励奖励1万元',
-                world: [
-                    {
-                        message: 'foo',
-                    },
-                    {
-                        message: 'bar'
-                    }
-                ]
+                id: '3',
+                img: '../../assets/home/homeListItem/03.png',
+                title: '南儿街顶楼地段好地铁房双林小学 带花园',
+                stmel: '梅溪湖',
+                stmels: '鼎奥国际',
+                number: '1450000',
+                specifications: '2室',
+                squaremeter: '127.7',
+                homesuper: '精装修',
+                avatar: '../../assets/home/Headportrait/s03.png',
+                type: '个人'
+            },
+            {
+                id: '4',
+                img: '../../assets/home/homeListItem/04.png',
+                title: '溪岛精装套三，靠地铁',
+                stmel: '长沙县',
+                stmels: '小遂溪岛',
+                number: '900000',
+                specifications: '3室1厅',
+                homesuper: '精装修',
+                squaremeter: '57.7',
+                avatar: '../../assets/home/Headportrait/s04.png',
+                type: '个人'
             }
+        ],
+        homeListItemYx: [
+            {
+                id: '1',
+                zd: '1',
+                img: '../../../assets/home/homeListItem/1231.jpg',
+                title: '海港广场，精装标准套三出售，带家具家电靠地铁',
+                stmel: '芙蓉区',
+                stmels: '长房东立',
+                number: '700000',
+                specifications: '2室1厅',
+                squaremeter: '67.7',
+                homesuper: '精装修',
+                avatar: '../../assets/home/Headportrait/s01.png',
+                type: '个人'
+            },
+            {
+                id: '2',
+                img: '../../../assets/home/homeListItem/1231.jpg',
+                title: '中心广场中心.领包入住，精装修房东直租',
+                stmel: '开福区',
+                stmels: '宽属大厦',
+                number: '900000',
+                specifications: '3室1厅',
+                squaremeter: '77.7',
+                homesuper: '精装修',
+                avatar: '../../assets/home/Headportrait/s02.png',
+                type: '个人'
+            },
+            {
+                id: '3',
+                img: '../../../assets/home/homeListItem/1231.jpg',
+                title: '南儿街顶楼地段好地铁房双林小学 带花园',
+                stmel: '梅溪湖',
+                stmels: '鼎奥国际',
+                number: '1450000',
+                specifications: '2室',
+                squaremeter: '127.7',
+                homesuper: '精装修',
+                avatar: '../../assets/home/Headportrait/s03.png',
+                type: '个人'
+            },
+            {
+                id: '4',
+                img: '../../../assets/home/homeListItem/1231.jpg',
+                title: '溪岛精装套三，靠地铁',
+                stmel: '长沙县',
+                stmels: '小遂溪岛',
+                number: '900000',
+                specifications: '3室1厅',
+                homesuper: '精装修',
+                squaremeter: '57.7',
+                avatar: '../../assets/home/Headportrait/s04.png',
+                type: '个人'
+            }
+        ],
+        homeS: [
+            {
+                id: 1,
+                title: '房主直卖'
+            }, {
+                id: 2,
+                title: '优选房源'
+            }
+        ],
+        currentInexs: 0,
+        currentInex: 0,
+        selectInex: 0,
+        dropList: [
+            {
+                id: 1,
+                img: "../../../assets/svg/Bottom.svg",
+                title: "全部"
+            },
+            {
+                id: 2,
+                img: "../../../assets/svg/Bottom.svg",
+                title: "价格"
+            },
+            {
+                id: 3,
+                img: "../../../assets/svg/Bottom.svg",
+                title: "户型"
+            },
+            {
+                id: 4,
+                img: "../../../assets/svg/Bottom.svg",
+                title: "更多"
+            }
+        ],
+        /**房东直租数据接口 */
 
+        homeS: [
+            {
+                id: 1,
+                title: '房主直卖'
+            }, {
+                id: 2,
+                title: '优选房源'
+            }
+        ],
+        diqu: [
+            '黑龙江',
+            '长春',
+            '哈尔滨',
+            '黑龙江',
+            '长春',
+            '哈尔滨',
+            '黑龙江',
+            '长春',
+            '哈尔滨',
+        ],
+        jiage: [
+            '70万以下',
+            '70-80万',
+            '80-100万',
+            '100-120万',
+            '120-140万',
+            '140-160万',
+        ],
+        huxing: [
+            '1室',
+            '2室',
+            '3室',
+            '4室',
+            '5室',
+            '5室以上'
+        ],
+        mianji: [
+            '50以下',
+            '50-70',
+            '70-90',
+            '90-110',
+            '110以上',
+
+        ],
+        leixing: [
+            '住宅',
+            '别墅',
+            '商铺',
+            '写字楼',
+            '其他',
         ]
     },
+
     onLoad: function (options) {
-
+        if (options.id == null) {
+            options.id = 0;
+        }
+        this.setData({
+            currentInexs: options.id,
+        })
     },
-
     methods: {
-        // 选项卡
-        filterTab: function (e) {
-            var data = [true, true, true], index = e.currentTarget.dataset.index;
-            data[index] = !this.data.tab[index];
+        onTaps: function (e) {
+            var nums = e.currentTarget.dataset.index;
+            /**更新赋值 setData() */
             this.setData({
-                tab: data
+                showarray: [0, 0, 0, 0],
+                mengban: '0',
+                titlearray: ['', '', '', ''],
+                currentInexs: nums,
+                /**数据源赋值 */
+            });
+            console.log(this.data.currentInexs)
+        },
+        /**导航标题联动 e是什么？log打印看看*/
+        selectToggle: function (e) {
+            var num = e.currentTarget.dataset.index;
+            this.setData({
+                showarray: [0, 0, 0, 0],
+                mengban: 1
+            });
+            if (num == 0) {
+                this.setData({
+                    showarray: [1, 0, 0, 0]
+                })
+            } else if (num == 1) {
+                this.setData({
+                    showarray: [0, 1, 0, 0]
+                })
+            } else if (num == 2) {
+                this.setData({
+                    showarray: [0, 0, 1, 0]
+                })
+            } else if (num == 3) {
+                this.setData({
+                    showarray: [0, 0, 0, 1]
+                })
+            };
+            console.log(this.data.showarray);
+
+            /**更新赋值 setData() */
+            this.setData({
+                currentInex: num
             })
         },
-
-        //筛选项点击操作
-        filter: function (e) {
-            var self = this, id = e.currentTarget.dataset.id, txt = e.currentTarget.dataset.txt, tabTxt = this.data.tabTxt;
-            switch (e.currentTarget.dataset.index) {
-                case '0':
-                    tabTxt[0] = txt;
-                    self.setData({
-                        tab: [true, true, true],
-                        tabTxt: tabTxt,
-                        pinpai_id: id,
-                        pinpai_txt: txt
-                    });
-                    break;
-                case '1':
-                    tabTxt[1] = txt;
-                    self.setData({
-                        tab: [true, true, true],
-                        tabTxt: tabTxt,
-                        jiage_id: id,
-                        jiage_txt: txt
-                    });
-                    break;
-                case '2':
-                    tabTxt[2] = txt;
-                    self.setData({
-                        tab: [true, true, true],
-                        tabTxt: tabTxt,
-                        xiaoliang_id: id,
-                        xiaoliang_txt: txt
-                    });
-                    break;
+        /**选项选中 */
+        select: function (e) {
+            var num = e.currentTarget.dataset.index;
+            var type = e.currentTarget.dataset.type;
+            if (type == 0) {
+                this.setData({
+                    cdiquindex: num,
+                })
+            } else if (type == 1) {
+                this.setData({
+                    cjiageindex: num,
+                })
+            } else if (type == 2) {
+                this.setData({
+                    chuxingindex: num,
+                })
+            } else if (type == 3) {
+                this.setData({
+                    cmianjiindex: num,
+                })
+            } else if (type == 4) {
+                this.setData({
+                    cleixingindex: num,
+                })
             }
-            //数据筛选
-            self.getDataList();
         },
+         /**地区确定 */
+  diquok:function(e){
+    this.setData({
+      mengban: 0,
+    //   cdiqu: this.data.diqu[this.data.cdiquindex]
+    })
+    this.setData({
+      titlearray:[this.data.cdiqu,this.data.cjiage,this.data.chuxing,this.data.cmianji],
+      showarray:[0,0,0,0]
+    })
+  },
+  /**价格确定 */
+  jiageok:function(e){
+    this.setData({
+      mengban: 0,
+      cjiage: this.data.jiage[this.data.cjiageindex],
+    })
+    this.setData({
+      titlearray: [this.data.cdiqu, this.data.cjiage, this.data.chuxing, 
+      this.data.cmianji],
+      showarray: [0, 0, 0, 0]
+    })
+  },
+   /**户型确定 */
+   huxingok:function(e){
+    this.setData({
+      mengban: 0,
+      chuxing: this.data.huxing[this.data.chuxingindex],
+    })
+    this.setData({
+      
+      titlearray: [this.data.cdiqu, this.data.cjiage, this.data.chuxing, this.data.cmianji],
+      showarray: [0, 0, 0, 0]
+    })
+    
+  },
 
-        //加载数据
-        getDataList: function () {
-            //调用数据接口，获取数据
-        }
+  /**更多确定 */
+  gengduook:function(e){
+    this.setData({
+      mengban: 0,
+      cmianji: this.data.mianji[this.data.cmianjiindex],
+      cleixing: this.data.leixing[this.data.cleixingindex],
+    })
+    if(this.data.cmianji == null){
+      this.setData({
+        cmianji:''
+      })
+    }
+    this.setData({
+      titlearray: [this.data.cdiqu, this.data.cjiage, this.data.chuxing, this.data.cmianji],
+      showarray: [0, 0, 0, 0]
+    })
+    
+  },
+  gotolistSellBuy:function(e){
+    wx.navigateTo({
+      url: '/pages/home/listSellBuy/listSellBuy'
+    })
+  },
+  mengbanok:function(){
+    this.setData({
+      showarray:[0,0,0,0],
+      mengban:'0',
+    })
+  },
+  buxian:function(){
+    this.setData({
+      chuxingindex:-1,
+      showarray: [0, 0, 0, 0],
+      mengban: '0',
+      chuxing:''
+    })
+    this.setData({
+      titlearray:[this.data.cdiqu,this.data.cjiage,this.data.chuxing,this.data.cmianji]
+    })
+  },
+  chongzhi: function () {
+    this.setData({
+      cmianjiindex: -1,
+      cleixingindex: -1,
+      showarray: [0, 0, 0, 0],
+      mengban: '0',
+      cmianji: '',
+      cleixing:''
+    })
+    this.setData({
+      titlearray: [this.data.cdiqu, this.data.cjiage, this.data.chuxing, this.data.cmianji]
+    })
+  },
     }
 })
