@@ -1,2 +1,8 @@
-<!--pages/company/search.wxml-->
-<text>pages/company/search.wxml</text>
+<view class="company_list_box">
+    <!-- 搜索框开始 -->
+    <SearchInput></SearchInput>
+    <!-- 搜索框结束 -->
+    <!-- tabs 开始 -->
+    <Tabs></Tabs>
+    <!-- tabs结束 -->
+</view>

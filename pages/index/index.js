@@ -13,10 +13,12 @@ Page({
         this.getNavigationList();
 
         this.getCompanyList();
+
+        this.getLocation();
     },
     // 获取轮播图
     getSwiperList(){
-        request({url:"http://localhost:8080/mini/getSwiperImgList"})
+        request({url:"/getSwiperImgList"})
         .then(result=>{
             this.setData({
                 swiperList:result.data.data
@@ -25,7 +27,7 @@ Page({
     },
     // 获取导航栏
     getNavigationList(){
-        request({url:"http://localhost:8080/mini/getNavigationImgList"})
+        request({url:"/getNavigationImgList"})
         .then(result=>{
             this.setData({
                 navigationList:result.data.data
@@ -34,11 +36,20 @@ Page({
     },
     //获取公司列表
     getCompanyList(){
-        request({url:"http://localhost:8080/mini/getCompanyList"})
+        request({url:"/getCompanyList"})
         .then(result=>{
             this.setData({
                 companyList:result.data.data
             })
+        })
+    },
+    getLocation(){
+        wx.getLocation({
+          success: (res)=>{
+              var latitude = res.latitude;
+              var longitude = res.longitude;
+              console.log('获取latitude：'+latitude +'获取longitude'+longitude);
+          }
         })
     }
 

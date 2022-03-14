@@ -1,4 +1,5 @@
 // pages/company/search.js
+import regeneratorRuntime from '../../lib/runtime/runtime';
 Page({
 
     /**
