@@ -1,0 +1,67 @@
+.index_container{
+    margin-top: 30rpx;
+  
+}
+.company_type{
+    margin-left: -15rpx;
+    font-size: 40rpx;
+    font-weight: bold;
+}
+.index_content navigator{
+    margin-left: 30rpx;
+    margin-bottom: 20rpx;
+    display: flex;
+    border-bottom: 3rpx solid #ddd;
+}
+.company_img{
+  max-width: 40%;
+  height: 210rpx;
+  border-radius: 30rpx;
+}
+.company_detail{
+    display: flex;
+    flex-direction: column;
+    margin-left: 25rpx;
+}
+.company_name{
+    margin-bottom: 11rpx;
+    font-size: 33rpx;
+    font-weight: bold;
+    overflow : hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 1;
+    -webkit-box-orient: vertical;
+    word-break: break-all;
+}
+.company_info{
+    margin-bottom: 10rpx;
+    font-size: 22rpx;
+    color: #808080;
+}
+.recruit_money{
+    margin-bottom: 14rpx;
+    font-size: 25rpx;
+    color: #FF0000;
+    font-weight: bold;
+}
+.recruit_number{
+    margin-bottom: 10rpx;
+    font-size: 25rpx;
+    color: #ec2727;
+    font-weight: bold;
+}
+.company_position{
+    margin-bottom: 14rpx;
+    font-size: 25rpx;
+    overflow : hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 1;
+    -webkit-box-orient: vertical;
+    word-break: break-all;
+}
+.recruit_key{
+    background: #F6CECE;
+    color: var(--themeColor);
+}

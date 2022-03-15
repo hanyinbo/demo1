@@ -1,0 +1,47 @@
+<view class="record">
+	<view class="record_basic">
+		<view class="basic_info">
+			<view class="basic_title">
+				<text class="title">基本信息</text>
+			</view>
+			<view class="basic_item">
+				<image class="item_img" src="/img/icon/people.png"></image>
+				<input placeholder="请输入客户姓名" name="name" mode="widthFix" />
+			</view>
+			<view class="basic_item">
+				<image class="item_img" src="/img/icon/phone.png"></image>
+				<input placeholder="请输入客户手机号" name="name" mode="widthFix" />
+			</view>
+			<view class="basic_item">
+				<image class="item_img" src="/img/icon/gander.png"></image>
+				<input placeholder="性别" name="name" mode="widthFix" />
+			</view>
+		</view>
+	</view>
+	<view class="record_res">
+		<view class="res_info">
+			<view class="res_title">
+				<text class="title">求职者需求</text>
+			</view>
+			<view class="res_item">
+				<image class="item_img" src="/img/icon/company.png"></image>
+				<input placeholder="请输入意向公司" name="name" mode="widthFix" />
+			</view>
+			<view class="res_item">
+				<image class="item_img" src="/img/icon/time.png"></image>
+				<input placeholder="请输入面试时间" name="name" mode="widthFix" />
+			</view>
+		</view>
+	</view>
+	<view class="record_remark">
+		<view class="remark_info">
+			<view class="remark_item">
+				<image class="item_img" src="/img/icon/remark.png"></image>
+				<input placeholder="备注留下" name="name" mode="widthFix" />
+			</view>
+		</view>
+	</view>
+	<view class="reccord_botton">
+       <button class="botton_res">推荐</button>
+	</view>
+</view>

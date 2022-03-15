@@ -3,7 +3,10 @@
         "pages/index/index",
         "pages/logs/logs",
         "pages/info/query",
-        "pages/company/search"
+        "pages/company/search",
+        "pages/record/record",
+        "pages/my/my",
+        "pages/commission/commission"
     ],
     "window": {
         "backgroundTextStyle": "light",
@@ -29,13 +32,13 @@
             "selectedIconPath": "/img/bottom/company-selected.png"
           },
           {
-            "pagePath": "pages/info/query",
+            "pagePath": "pages/record/record",
             "text": "报备",
             "iconPath": "/img/bottom/backup.png",
             "selectedIconPath": "/img/bottom/backup-selected.png"
           },
           {
-            "pagePath": "pages/logs/logs",
+            "pagePath": "pages/my/my",
             "text": "我的",
             "iconPath": "/img/bottom/my.png",
             "selectedIconPath": "/img/bottom/my-selected.png"

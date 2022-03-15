@@ -5,4 +5,21 @@
     <!-- tabs 开始 -->
     <Tabs></Tabs>
     <!-- tabs结束 -->
+    <!-- 公司列表开始 -->
+  <view class="index_container" wx:for="{{companyList}}" wx:key="id">
+    <view class="index_content">
+      <navigator wx:for="{{item.companyList}}" wx:for-item="item1" wx:for-index="index1" wx:key="id">
+        <image class="company_img" src="{{item1.companyImgUrl}}"></image>
+        <view class="company_detail">
+          <text class="company_name">{{item1.companyName}}</text>
+          <text class="company_info">{{item1.region}} | {{item1.industry}}</text>
+          <text class="company_position">{{item1.position}}</text>
+          <text class="recruit_money">佣金：{{item1.money}}元</text>
+          <text class="recruit_number">人数：{{item1.number}}人</text>
+        </view>
+      </navigator>
+    </view>
+  </view>
+  <!-- 公司列表结束 -->
+
 </view>

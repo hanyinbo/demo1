@@ -1,0 +1,16 @@
+<!-- 个人信息 -->
+<view class="summary">
+    <view class="nickname">总佣金</view>
+    <view class="nickname_price">0</view>
+</view>
+<!-- 账户 -->
+<view class="account">
+    <view class="item">
+        <view class="value coupon">0</view>
+        <view class="caption">推荐人数</view>
+    </view>
+    <view class="item">
+        <view class="value balance">0</view>
+        <view class="caption">总佣金</view>
+    </view>
+</view>

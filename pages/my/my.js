@@ -1,30 +1,20 @@
-// pages/company/search.js
-import regeneratorRuntime from '../../lib/runtime/runtime';
-import { request } from '../../request/index.js';
+// pages/my/my.js
 Page({
 
     /**
      * 页面的初始数据
      */
     data: {
-        companyList: []
+
     },
 
     /**
      * 生命周期函数--监听页面加载
      */
     onLoad: function (options) {
-        this.getCompanyList();
+
     },
-    //获取公司列表
-    getCompanyList() {
-        request({ url: "/getCompanyList" })
-            .then(result => {
-                this.setData({
-                    companyList: result.data.data
-                })
-            })
-    },
+
     /**
      * 生命周期函数--监听页面初次渲染完成
      */

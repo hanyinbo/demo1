@@ -58,6 +58,7 @@
     margin-left: 30rpx;
     margin-bottom: 10rpx;
     display: flex;
+    border-bottom: 3rpx solid #ddd;
 }
 .company_img{
   max-width: 40%;

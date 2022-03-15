@@ -1,0 +1,73 @@
+.summary{
+    background-color: var(--themeColor);
+    height: 250rpx;
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    align-items: center;
+    justify-content: center;
+}
+/* .summary  */
+.nickname{
+    color: rgb(255, 255, 255);
+    font-size: 32rpx;
+}
+.nickname_price{
+   color: rgb(255, 255, 255);
+   font-size: 32rpx;
+}
+/*单位*/
+.summary .nickname_price:after {
+    content: '元';
+    font-size: 25rpx;
+    margin-left: 5rpx;
+}
+.account {
+	display: flex;
+	flex-direction: row;
+	justify-content: space-around;
+	margin-top: 10px;
+	background: white;
+}
+
+.account .item:last-child {
+	border-right: 0;
+}
+
+/*数值*/
+.account .item .value {
+	font-size: 18px;
+	padding-top: 10px;
+}
+
+/*after通用样式*/
+.account .item .value:after {
+	font-size: 12px;
+	margin-left: 5px;
+}
+
+/* 推荐人数 */
+.account .item .coupon {
+	color: var(--themeColor);
+}
+/*单位*/
+.account .item .coupon:after {
+	content: '个';
+}
+
+/* 总佣金 */
+.account .item .balance {
+	color: var(--themeColor);
+}
+/*单位*/
+.account .item .balance:after {
+	content: '元';
+}
+/*标签*/
+.account .item .caption {
+	margin-top: 5px;
+	color: #666;
+	font-size: 14px;
+	height: 100rpx;
+}
+

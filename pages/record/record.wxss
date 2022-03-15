@@ -1,0 +1,93 @@
+/* pages/record/record.wxss */
+page {
+    background-color: #f1f1f1;
+}
+.record{
+    display: block;
+}
+.record_basic {
+    display: flex;
+    background-color: white;
+    margin: 30rpx 30rpx 30rpx 30rpx;
+    border-radius: 5rpx;
+}
+.record_res{
+    display: flex;
+    background-color: white;
+    margin: 30rpx 30rpx 30rpx 30rpx;
+    border-radius: 5rpx;
+}
+.record_remark{
+    display: flex;
+    background-color: white;
+    margin: 30rpx 30rpx 30rpx 30rpx;
+    border-radius: 5rpx;
+}
+.basic_info{
+    width: 100%;
+    margin: 20rpx 20rpx 50rpx 20rpx ;
+}
+.res_info{
+    width: 100%;
+    margin: 20rpx 20rpx 50rpx 20rpx ;
+}
+.remark_info{
+    width: 100%;
+    margin: 20rpx 20rpx 20rpx 20rpx ;
+}
+.basic_title{
+    padding-bottom: 10rpx;
+    border-bottom: 1rpx solid #ddd;
+}
+.res_title{
+    padding-bottom: 10rpx;
+    border-bottom: 1rpx solid #ddd;
+}
+.basic_item{
+    display: flex;
+    margin-top: 50rpx;
+    margin-left: 20rpx;
+}
+.res_item{
+    display: flex;
+    margin-top: 50rpx;
+    margin-left: 20rpx;
+}
+.remark_item{
+    display: flex;
+    margin-top: 30rpx;
+    margin-left: 20rpx;
+    margin-bottom: 20rpx;
+    border-bottom: 1rpx solid #ddd;
+}
+.item_img{
+    width: 40rpx;
+    height: 40rpx;
+}
+.basic_item input{
+    width: 100%;
+    margin-left: 13rpx;
+    font-size: 22rpx;
+    border-bottom: 1rpx solid #ddd;
+}
+
+.res_item input{
+    width: 100%;
+    margin-left: 13rpx;
+    font-size: 22rpx;
+    border-bottom: 1rpx solid #ddd;
+}
+.remark_item input{
+    width: 100%;
+    margin-left: 13rpx;
+    font-size: 22rpx;
+    border-bottom: 1rpx solid #ddd;
+}
+.botton_res{
+    color: white;
+    font-size: 36rpx;
+    background-color: var(--themeColor);
+    margin: 30rpx 30rpx 30rpx 30rpx;
+    border-radius: 5rpx;
+}
+
