@@ -6,11 +6,11 @@
 <!-- 账户 -->
 <view class="account">
     <view class="item">
-        <view class="value coupon">0</view>
-        <view class="caption">推荐人数</view>
+        <view class="value number">0</view>
+        <view class="people">推荐人数</view>
     </view>
     <view class="item">
-        <view class="value balance">0</view>
-        <view class="caption">总佣金</view>
+        <view class="value price">0</view>
+        <view class="commission">总佣金</view>
     </view>
 </view>

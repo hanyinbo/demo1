@@ -39,35 +39,34 @@
 	font-size: 18px;
 	padding-top: 10px;
 }
-
 /*after通用样式*/
 .account .item .value:after {
 	font-size: 12px;
 	margin-left: 5px;
 }
-
+.account .item {
+	display: flex;
+	flex-direction: column;
+	text-align: center;
+	margin-left: 0;
+	flex: 1;
+	border-right: 1px solid #eee;
+}
 /* 推荐人数 */
-.account .item .coupon {
+.account .item .value {
 	color: var(--themeColor);
 }
-/*单位*/
-.account .item .coupon:after {
+/*人数 单位*/
+.account .item .number:after {
 	content: '个';
 }
 
-/* 总佣金 */
-.account .item .balance {
-	color: var(--themeColor);
+/* 总佣金数 */
+.account .item .commission {
+	/* color: var(--themeColor); */
 }
-/*单位*/
-.account .item .balance:after {
+/*总佣金 单位*/
+.account .item .price:after {
 	content: '元';
-}
-/*标签*/
-.account .item .caption {
-	margin-top: 5px;
-	color: #666;
-	font-size: 14px;
-	height: 100rpx;
 }
 

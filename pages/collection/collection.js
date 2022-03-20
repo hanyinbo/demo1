@@ -1,20 +1,31 @@
-// pages/record/record.js
+// pages/collection/collection.js
+import { request } from '../../request/index.js';
 Page({
 
     /**
      * 页面的初始数据
      */
     data: {
-        userInfo: {},
+      collectionList:[]
     },
 
     /**
      * 生命周期函数--监听页面加载
      */
     onLoad: function (options) {
-     
+        // 调用获取我的收藏method
+  this.getCollectionList();
     },
 
+    // 获取我的收藏
+    getCollectionList(){
+        request({url:"/getCompanyList"})
+        .then(result=>{
+            this.setData({
+                collectionList:result.data.data
+            })
+        })
+    },
     /**
      * 生命周期函数--监听页面初次渲染完成
      */

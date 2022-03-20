@@ -1,0 +1,29 @@
+
+.search_wrapper {
+    height: 80rpx;
+    padding: 10rpx;
+    font-size: 11px;
+    background-color: var(--themeColor);
+    display: flex;
+    flex-direction: row;
+}
+
+.search_row {
+    display: flex;
+    height: 100%;
+    width: 100%;
+    margin-left: 25rpx;
+    margin-right: 25rpx;
+    justify-content: center;
+    align-items: center;
+    background-color: #FFFFFF;
+    border-radius: 15rpx;
+}
+
+.input_image {
+    height: 42rpx;
+    width: 42rpx;
+    align-self: center;
+    margin-left: 10rpx;
+    margin-right: 15rpx;
+}

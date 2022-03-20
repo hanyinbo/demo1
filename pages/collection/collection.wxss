@@ -1,11 +1,9 @@
-.company_type{
-    margin-left: -15rpx;
-    font-size: 40rpx;
-    font-weight: bold;
+.index_container{
+    margin-top: 30rpx;
 }
 .index_content navigator{
     margin-left: 30rpx;
-    margin-bottom: 20rpx;
+    margin-bottom: 10rpx;
     display: flex;
     border-bottom: 3rpx solid #ddd;
 }
@@ -22,6 +20,7 @@
 .company_name{
     margin-bottom: 11rpx;
     font-size: 33rpx;
+    color: #666;
     font-weight: bold;
     overflow : hidden;
     text-overflow: ellipsis;

@@ -1,20 +1,35 @@
-// pages/record/record.js
+const { request } = require("../../request/index");
+
+// pages/company_info/info.js
 Page({
 
     /**
      * 页面的初始数据
      */
     data: {
-        userInfo: {},
+      companyDetail:{}
     },
 
     /**
      * 生命周期函数--监听页面加载
      */
     onLoad: function (options) {
-     
+        const companyId = options;
+        this.getCompanyDetail(companyId.id);
     },
+    async getCompanyDetail(companyId){
+        const detailList = await request({url:"/getCompanyDetailById",data:{"companyId":companyId}});
+        this.setData({
+            companyDetail:detailList.data.data
+        })
+    } ,
 
+    freeTell: function(){
+        console.log('进入拨打电话')
+        wx.makePhoneCall({
+          phoneNumber: '13407937436',
+        })
+      },
     /**
      * 生命周期函数--监听页面初次渲染完成
      */

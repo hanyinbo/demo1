@@ -210,6 +210,7 @@ Component({
         select: function (e) {
             var num = e.currentTarget.dataset.index;
             var type = e.currentTarget.dataset.type;
+            console.log("选中")
             if (type == 0) {
                 this.setData({
                     cdiquindex: num,

@@ -1,0 +1,6 @@
+<view class="customer_wrapper">
+ <view class="customer_item">
+   <image class="customer_qrcode" src="../../img/qrcode/customer.jpg"></image> 
+   <text class="customer_text">请扫描以上二维码，添加客服微信</text>
+ </view>
+</view>

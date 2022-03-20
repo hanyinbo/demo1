@@ -1,0 +1,19 @@
+
+.customer_item{
+    display: flex;
+    flex-direction: column;
+    align-items: center; /**子view垂直居中*/
+    vertical-align: center; /**垂直居中*/
+    justify-content: center; /**内容居中*/
+
+}
+.customer_qrcode{
+    width: 450rpx;
+    height: 450rpx;
+    margin-top: 20%;
+    margin-bottom: 35rpx;
+}
+.customer_text{
+   color: var(--themeColor);
+   font-size: 46rpx;
+}

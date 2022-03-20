@@ -1,0 +1,6 @@
+<view class="search_wrapper">
+    <view class="search_row">
+        <image class="input_image" src="/img/bottom/zoom.png"></image>
+        <input placeholder="请输入客户名称"></input>
+    </view>
+</view>

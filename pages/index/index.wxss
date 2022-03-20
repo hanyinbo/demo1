@@ -17,7 +17,6 @@
 }
 .index_navigation{
     display: flex;
-
 }
 .index_navigation navigator{
     flex: 1;

@@ -1,0 +1,8 @@
+{
+  "usingComponents": {
+
+    "CommonSearchInput":"../../components/CommonSearchInput/CommonSearchInput",
+    "RecommendTabs":"../../components/RecommendTabs/RecommendTabs"
+  },
+  "navigationBarTitleText": "我的推荐"
+}

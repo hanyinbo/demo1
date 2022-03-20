@@ -1,11 +1,22 @@
-<!-- 个人信息 -->
-<view class="summary">
+<!-- 头像区域 -->
+<!-- <view class="summary">
+	<block>
+		<image src="{{user.userInfo.avatar ? user.userInfo.avatar : '/img/avatar/avatar.png'}}" class="avatar" />
+		<view class="nickname">韩</view>
+	</block>
+	<button class="login_button" open-type="getUserProfile" bindgetuserinfo="getUserInfo">授权登陆</button>
+</view> -->
 
-		<image src="{{user.userInfo.avatar ? user.userInfo.avatar : '/img/bottom/line.png'}}" class="avatar" />
-
-		<view class="nickname">{{user.userInfo.nickname}}</view>
-</view>
-<!-- 账户 -->
+<view class="userinfo">
+    <block wx:if="{{!hasUserInfo}}">
+      <button wx:if="{{canIUseGetUserProfile}}" bindtap="getUserProfile" class="userinfo-button"> 授权登录 </button>
+    </block>
+    <block wx:else>
+      <image bindtap="bindViewTap" class="userinfo-avatar" src="{{userInfo.avatarUrl}}" mode="cover"></image>
+      <text class="userinfo-nickname">{{userInfo.nickName}}</text>
+    </block>
+  </view>
+<!-- 统计页签 -->
 <view class="account">
 	<view class="item">
 		<view class="value coupon">0</view>
@@ -16,40 +27,39 @@
 		<view class="caption">总佣金</view>
 	</view>
 </view>
-<!-- 列表 -->
+<!-- 功能导航列表 -->
 <view class="listview">
 	<view class="item">
-		<image class="hd" src="/images/address.png" />
-		<navigator class="bd" url="../commission/commission" open-type="navigate" hover-class="none">我的推荐</navigator>
-		<view class="ft"></view>
-	</view>
-    <view class="item">
-		<image class="hd" src="/images/setting.png" />
-		<navigator class="bd" url="../../shop/setting/setting" open-type="navigate" hover-class="none">我的佣金</navigator>
+		<!-- <image class="hd" src="/images/address.png" /> -->
+		<navigator class="bd" url="../recommend/recommend" open-type="navigate" hover-class="none">我的推荐</navigator>
 		<view class="ft"></view>
 	</view>
 	<view class="item">
-		<image class="hd" src="/images/category.png" />
+		<!-- <image class="hd" src="/images/setting.png" /> -->
+		<navigator class="bd" url="../commission/commission" open-type="navigate" hover-class="none">我的佣金</navigator>
+		<view class="ft"></view>
+	</view>
+	<view class="item">
+		<!-- <image class="hd" src="/images/category.png" /> -->
 		<navigator class="bd" url="../../category/list/list" open-type="navigate" hover-class="none">我的资料</navigator>
 		<view class="ft"></view>
 	</view>
 	<view class="item">
-		<image class="hd" src="/images/food.png" />
+		<!-- <image class="hd" src="/images/food.png" /> -->
 		<navigator class="bd" url="../../food/list/list" open-type="navigate" hover-class="none">我的消息</navigator>
 		<view class="ft"></view>
 	</view>
-    <view class="item">
-		<image class="hd" src="/images/food.png" />
+	<view class="item">
+		<!-- <image class="hd" src="/images/food.png" /> -->
 		<navigator class="bd" url="../../food/list/list" open-type="navigate" hover-class="none">意见反馈</navigator>
 		<view class="ft"></view>
 	</view>
-    <view class="item">
-		<image class="hd" src="/images/food.png" />
-		<navigator class="bd" url="../../food/list/list" open-type="navigate" hover-class="none">联系客服</navigator>
+	<view class="item">
+		<!-- <image class="hd" src="/images/food.png" /> -->
+		<navigator class="bd" url="../customer/customer" open-type="navigate" hover-class="none">联系客服</navigator>
 		<view class="ft"></view>
 	</view>
 </view>
-
 <!-- 退出登录 -->
 <view class="logout" bindtap="logout">
 	退出登录

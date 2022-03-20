@@ -1,0 +1,71 @@
+<view class="detail_swiper">
+  <swiper autoplay circular indicator-dots indicator-color="#FFFFFF" indicator-active-color="#d81e06">
+    <swiper-item wx:for="{{companyDetail.companyDetailImgs}}" wx:key="id">
+      <image mode="widthFix" src="{{item.imgUrl}}"></image>
+    </swiper-item>
+  </swiper>
+</view>
+<view class="company_detail">
+  <view class="index_title">
+    <view class="title_container">
+      <image class="title_img" src="../../img/bottom/line.png"></image>
+      <text class="company_type">{{companyDetail.companyName}}</text>
+    </view>
+  </view>
+  <view class="position">
+    <view class="position_list" wx:for="{{companyDetail.wxPositionList}}" wx:for-item="item1" wx:for-index="index1" wx:key="id">
+      <text class="position_text" mode="widthFix">{{item1.positionName}}</text>
+    </view>
+  </view>
+  <view class="money">
+    <text>{{companyDetail.money}}</text>
+  </view>
+  <view class="address">
+    <image class="address_img" src="/img/icon/location.png"></image>
+    <text class="address_text">{{companyDetail.address}}</text>
+  </view>
+  <view class="welfare">
+    <view class="welfare_title">
+      <text class="welfare_title_text"> 福利待遇：</text>
+    </view>
+    <view class="welfare_info">
+      <text class="welfare_text">{{companyDetail.welfare}}</text>
+    </view>
+  </view>
+  <view class="job_require">
+    <view class="req_title">
+      <text class="req_title_text">招聘要求：</text>
+    </view>
+    <view class="req_info">
+      <text class="req_text">{{companyDetail.jobRequire}}</text>
+    </view>
+  </view>
+  <view class="int_addr">
+    <view class="int_addr_title">
+      <text class="welfare_title_text"> 面试地址：</text>
+    </view>
+    <view class="int_addr_info">
+      <image class="address_img" src="/img/icon/location.png"></image>
+      <text class="address_text">{{companyDetail.interviewAddress}}</text>
+    </view>
+  </view>
+  <view>
+  </view>
+</view>
+<view class="btm_tool">
+  <view class="tool_item"  catchtap='freeTell'>
+    <image class="item_img" src="../../img/icon/telphone.png"></image>
+    <text class="item_text phone">电话 </text>
+  </view>
+  <view class="tool_item">
+    <image class="item_img" src="../../img/icon/collection1.png"></image>
+    <text class="item_text collection">收藏</text>
+  </view>
+  <view class="tool_item">
+    <image class="item_img" src="../../img/icon/share.png"></image>
+    <text class="item_text share">分享</text>
+  </view>
+  <view class="btn_record">
+    <view class="btn_record_text">立即推荐</view>
+  </view>
+</view>

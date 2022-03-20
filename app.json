@@ -6,7 +6,12 @@
         "pages/company/search",
         "pages/record/record",
         "pages/my/my",
-        "pages/commission/commission"
+        "pages/commission/commission",
+        "pages/company_info/info",
+        "pages/recommend/recommend",
+        "pages/collection/collection",
+        "pages/customer/customer",
+        "pages/login/login"
     ],
     "window": {
         "backgroundTextStyle": "light",

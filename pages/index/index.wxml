@@ -17,7 +17,7 @@
 
   <!-- 导航栏开始 -->
   <view class="index_navigation">
-    <navigator wx:for="{{navigationList}}" wx:key="id">
+    <navigator wx:for="{{navigationList}}" wx:key="id" url="{{item.navigatorUrl}}" open-type="navigate">
       <image class="navigation_img" mode="widthFix" src="{{item.imgUrl}}"></image>
       <p class="navigation_img_text">{{item.imgName}}</p>
     </navigator>
@@ -32,7 +32,7 @@
       </view>
     </view>
     <view class="index_content">
-      <navigator wx:for="{{item.companyList}}" wx:for-item="item1" wx:for-index="index1" wx:key="id">
+      <navigator wx:for="{{item.companyList}}" wx:for-item="item1" wx:for-index="index1" wx:key="id" url="/pages/company_info/info?id={{item1.id}}" open-type="navigate">
         <image class="company_img" src="{{item1.companyImgUrl}}"></image>
         <view class="company_detail">
           <text class="company_name">{{item1.companyName}}</text>

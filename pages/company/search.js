@@ -7,70 +7,59 @@ Page({
      * 页面的初始数据
      */
     data: {
-        companyList: []
+        companyList: [],
+        searchForm: [],
+        queryForm: {
+            companyName: "一台特鲁尼控股有限公司"
+        }
     },
+    TimeId: -1,
 
     /**
      * 生命周期函数--监听页面加载
      */
     onLoad: function (options) {
-        this.getCompanyList();
+        this.getCompanypage();
     },
     //获取公司列表
-    getCompanyList() {
-        request({ url: "/getCompanyList" })
+    getCompanypage() {
+        request({
+            url: "/page/getCompanyPages",
+            data: {
+                // companyName:"一台特鲁尼控股有限公司",
+                current: 1,
+                size: 10
+            },
+        })
             .then(result => {
                 this.setData({
-                    companyList: result.data.data
+                    companyList: result.data.data.records
                 })
             })
     },
-    /**
-     * 生命周期函数--监听页面初次渲染完成
-     */
-    onReady: function () {
-
+    // 根据公司名称查询  自定义事件
+    handleItemChange(e) {
+        console.log('父组件输出：' + JSON.stringify(e))
+        const { companyName } = e.detail;
+        if (!companyName.trim()) {
+            return;
+        }
+        clearTimeout(this.TimeId);
+        this.TimeId = setTimeout(() => {
+            this.queryByName(companyName);
+        }, 1000);
     },
-
-    /**
-     * 生命周期函数--监听页面显示
-     */
-    onShow: function () {
-
+    async queryByName(query) {
+        console.log('参数：' + query)
+        const res = await request({ url: "/getCompanyDetailByName", data: { 'companyName': query } })
+        console.log("查询公司：" + JSON.stringify(res.data.data));
+        this.setData({
+            companyList: res.data.data
+        })
     },
-
-    /**
-     * 生命周期函数--监听页面隐藏
-     */
-    onHide: function () {
-
-    },
-
-    /**
-     * 生命周期函数--监听页面卸载
-     */
-    onUnload: function () {
-
-    },
-
-    /**
-     * 页面相关事件处理函数--监听用户下拉动作
-     */
-    onPullDownRefresh: function () {
-
-    },
-
-    /**
-     * 页面上拉触底事件的处理函数
-     */
-    onReachBottom: function () {
-
-    },
-
-    /**
-     * 用户点击右上角分享
-     */
-    onShareAppMessage: function () {
-
+    // 上滑
+    onReachBottom() {
+        console.log('上滑')
     }
+
 })

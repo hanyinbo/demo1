@@ -1,0 +1,4 @@
+<view class="recommend_box">
+    <CommonSearchInput></CommonSearchInput>
+    <RecommendTabs tabs="{{tabs}}" bindtabsItemChange="handleTabsItemChange"></RecommendTabs>
+</view>

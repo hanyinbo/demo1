@@ -14,7 +14,7 @@
             "list": [
                 {
                     "name": "",
-                    "pathName": "pages/commission/commission",
+                    "pathName": "pages/index/index",
                     "query": "",
                     "scene": null,
                     "launchMode": "default"

@@ -1,0 +1,21 @@
+.rec_tabs{
+ 
+}
+.rec_tabs_title{
+   display: flex;
+   padding: 15rpx 0;
+}
+.title_item{
+   height: 65rpx;
+   font-size: 30rpx;
+   color: #a8a8a8;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   flex: 1;
+}
+.active{
+    color: var(--themeColor);
+    font-weight: bold;
+    border-bottom: 4rpx solid currentColor;
+}

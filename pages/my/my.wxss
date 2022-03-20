@@ -4,29 +4,32 @@ page {
 }
 
 /*个人信息*/
-.summary {
+.userinfo {
+	height: 240rpx;
 	background: #f11b1b;
 	display: flex;
-	flex-direction: row;
+	flex-direction: column;
+	justify-content: center;
 	align-items: center;
 }
 
 /*头像*/
-.summary .avatar {
-	width: 80px;
-	height: 80px;
-	margin: 20px;
+.userinfo-avatar {
+	width: 60px;
+	height: 60px;
+	margin: 15px;
 	border-radius: 50%;
 }
 
 /*昵称*/
-.summary .nickname {
+.userinfo-nickname {
 	color: white;
-	font-size: 22px;
+	font-size: 16px;
 }
-
-/*.个人信息*/
-
+.userinfo-button{
+	background-color:white;
+	font-size: 35rpx;
+}
 /*账户信息*/
 .account {
 	display: flex;

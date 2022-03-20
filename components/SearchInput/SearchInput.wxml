@@ -1,6 +1,6 @@
 <view class="search_input">
  <navigator class="input_swaper" url="../../pages/company/search" open-type="switchTab">
    <image class="input_image" src="../../img/bottom/zoom.png"></image>
-   <text>请输入公司名称</text>
+   <input placeholder="请输入公司名称" bindinput="handleInput"></input>
  </navigator>
 </view>
